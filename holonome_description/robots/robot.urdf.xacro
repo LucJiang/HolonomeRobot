@@ -144,19 +144,109 @@
     </collision>
   </link>
   
+  <joint name="rouleau_front5_joint" type="continuous">
+    <parent link="wheel_front"/>
+    <child link="rouleau_front5"/>
+    <origin xyz="-3.8 0 17.31" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="rouleau_front5">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_front6_joint" type="continuous">
+    <parent link="wheel_front"/>
+    <child link="rouleau_front6"/>
+    <origin xyz="-3.8 17.31 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="rouleau_front6">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_front7_joint" type="continuous">
+    <parent link="wheel_front"/>
+    <child link="rouleau_front7"/>
+    <origin xyz="-3.8 0 -17.31" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="rouleau_front7">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_front8_joint" type="continuous">
+    <parent link="wheel_front"/>
+    <child link="rouleau_front8"/>
+    <origin xyz="-3.8 -17.31 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="rouleau_front8">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </collision>
+  </link>
+
+  <joint name="wheel_left_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left"/>
+    <origin xyz="-58.6 101.5 -21.4" rpy="0 0 ${pi*2/3}"/>
+    <axis xyz="${cos(pi*2/3)} ${sin(pi*2/3)} 0"/>
+  </joint>
 
   <link name="wheel_left">
     <visual>
       <geometry>
         <mesh filename="package://holonome_description/meshes/roue.stl"/>
       </geometry>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://holonome_description/meshes/roue.stl"/>
       </geometry>
-      <origin xyz="-58.6 101.5 -21.4" rpy="0 ${pi/2} ${pi*2/3}"/>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
     </collision>
     <!--
     <inertial>
@@ -169,27 +259,194 @@
     -->
   </link>
 
-  <joint name="wheel_left_joint" type="continuous">
+
+  <joint name="rouleau_left1_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left1"/>
+    <origin xyz="7.4 12.24 -12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 1"/>
+  </joint>
+  <link name="rouleau_left1">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_left2_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left2"/>
+    <origin xyz="7.4 -12.24 -12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 -1"/>
+  </joint>
+  <link name="rouleau_left2">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${-pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${-pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_left3_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left3"/>
+    <origin xyz="7.4 -12.24 12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 1"/>
+  </joint>
+  <link name="rouleau_left3">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_left4_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left4"/>
+    <origin xyz="7.4 12.24 12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 -1"/>
+  </joint>
+  <link name="rouleau_left4">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${-pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+  
+  <joint name="rouleau_left5_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left5"/>
+    <origin xyz="-3.8 0 17.31" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="rouleau_left5">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_left6_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left6"/>
+    <origin xyz="-3.8 17.31 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="rouleau_left6">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_left7_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left7"/>
+    <origin xyz="-3.8 0 -17.31" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="rouleau_left7">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_left8_joint" type="continuous">
+    <parent link="wheel_left"/>
+    <child link="rouleau_left8"/>
+    <origin xyz="-3.8 -17.31 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="rouleau_left8">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </collision>
+  </link>
+
+  <joint name="wheel_right_joint" type="continuous">
     <parent link="base_link"/>
-    <child link="wheel_left"/>
-    <origin xyz="-58.6 101.5 -21.4" rpy="0 ${pi/2} ${pi*2/3}"/>
+    <child link="wheel_right"/>
+    <origin xyz="-58.6 -101.5 -21.4" rpy="0 0 ${-pi*2/3}"/>
     <axis xyz="${cos(pi*2/3)} ${sin(pi*2/3)} 0"/>
   </joint>
-
-  
 
   <link name="wheel_right">
     <visual>
       <geometry>
         <mesh filename="package://holonome_description/meshes/roue.stl"/>
       </geometry>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
     </visual>
     <collision>
       <geometry>
         <mesh filename="package://holonome_description/meshes/roue.stl"/>
       </geometry>
-      <origin xyz="-58.6 -101.5 -21.4" rpy="0 ${pi/2} ${-pi*2/3}"/>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
     </collision>
     <!--
     <inertial>
@@ -202,11 +459,174 @@
     -->
   </link>
   
-  <joint name="wheel_right_joint" type="continuous">
-    <parent link="base_link"/>
-    <child link="wheel_right"/>
-    <origin xyz="-58.6 -101.5 -21.4" rpy="0 ${pi/2} ${-pi*2/3}"/>
-    <axis xyz="${cos(pi*2/3)} ${sin(pi*2/3)} 0"/>
+  
+
+  <joint name="rouleau_right1_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right1"/>
+    <origin xyz="7.4 12.24 -12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 1"/>
   </joint>
+  <link name="rouleau_right1">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_right2_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right2"/>
+    <origin xyz="7.4 -12.24 -12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 -1"/>
+  </joint>
+  <link name="rouleau_right2">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${-pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${-pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_right3_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right3"/>
+    <origin xyz="7.4 -12.24 12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 1"/>
+  </joint>
+  <link name="rouleau_right3">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_right4_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right4"/>
+    <origin xyz="7.4 12.24 12.24" rpy="0 0 0"/>
+    <axis xyz="0 1 -1"/>
+  </joint>
+  <link name="rouleau_right4">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${-pi/4} ${-pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/4} ${-pi/2}"/>
+    </collision>
+  </link>
+  
+  <joint name="rouleau_right5_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right5"/>
+    <origin xyz="-3.8 0 17.31" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="rouleau_right5">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_right6_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right6"/>
+    <origin xyz="-3.8 17.31 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="rouleau_right6">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_right7_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right7"/>
+    <origin xyz="-3.8 0 -17.31" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+  <link name="rouleau_right7">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+    </collision>
+  </link>
+
+  <joint name="rouleau_right8_joint" type="continuous">
+    <parent link="wheel_right"/>
+    <child link="rouleau_right8"/>
+    <origin xyz="-3.8 -17.31 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+  <link name="rouleau_right8">
+    <visual>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://holonome_description/meshes/rouleau.stl"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+    </collision>
+  </link>
 
 </robot>
