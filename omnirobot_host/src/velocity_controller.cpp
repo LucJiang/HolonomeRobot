@@ -79,7 +79,7 @@ public:
         _stay_stop = false;
         
         _switch_sub =  _n.subscribe("/switch/velocity_controller", 1, &VelocityController::switchCallback, this);
-        _velocity_command_sub = _n.subscribe("velocity_commands", 100, &VelocityController::velComCallback, this);
+        _velocity_command_sub = _n.subscribe("/cmd_vel", 100, &VelocityController::velComCallback, this);
         _wheel_speeds_command_pub = _n.advertise<omnirobot_msgs::WheelSpeeds>("/wheel_speeds_commands", 100);
         #ifdef SIMULATE_BYPASS_ENCODER_LEVEL
         // send /wheel_speeds_command msg directly to /wheel_speeds, to simulate a perfect motor

@@ -1,3 +1,5 @@
 <launch>
   <node name="velocity_controller" pkg="omnirobot_host" type="velocity_controller" respawn="true" output="screen"/>
+  <node name="wheel_speeds_controller" pkg="omnirobot_host" type="wheel_speeds_controller" respawn="true" output="screen"/>
+  <node name="teleop" pkg="teleop_twist_keyboard_cpp" type="teleop_twist_keyboard" output="screen"/>
 </launch>
